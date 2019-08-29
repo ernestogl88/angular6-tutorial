@@ -11,20 +11,20 @@ export class CartService {
     private http: HttpClient,
   ) { }
 
-  addToCart(product){
+  addToCart(product) {
     this.items.push(product);
   }
 
-  getItems(){
+  getItems() {
     return this.items;
   }
 
-  clearCart(){
+  clearCart() {
     this.items = [];
     return this.items;
   }
 
-  getShippingPrices(){
+  getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
 }
